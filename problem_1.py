@@ -3,17 +3,16 @@ with open(r'input\prob1_inp.txt', 'r') as file:
 
 def calc():
         numbers = 0
-        #digits = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+        digits = {1: 'one', 2:'two', 3:'three', 4:'four', 5:'five', 6:'six', 7:'seven', 8:'eight', 9:'nine'}
         for line in lines:
             temp = []
-            #tempc = []
-            for ch in line:
-                if ch.isdigit():
-                    temp += ch
-         #       else:
-          #          tempc += ch
-          #  res = [digi for digi in "".join(tempc) if (digi in digits)]
-           # print(res)
+            for i, c in enumerate(line):
+                if c.isdigit():
+                    temp.append(c)
+                for num, val in digits.items():
+                     if line[i:].startswith(val):
+                          temp.append(str(num))    
+                    
             num = temp[0] + temp[-1]
             numbers = numbers + int(num)
         
