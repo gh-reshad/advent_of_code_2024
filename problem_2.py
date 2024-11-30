@@ -1,7 +1,7 @@
 with open(r'input\prob2_inp.txt', 'r') as file:
     lines = file.readlines()
 
-def check_validity():
+def get_power_sum():
     #max_cubes = {'red':12, 'green':13, 'blue': 14}
     #sum_possible_games = 0
     min_cubes = {'red': 0, 'green': 0, 'blue': 0}
@@ -37,4 +37,5 @@ def check_validity():
 
 
 if __name__ == "__main__":
-    check_validity()
+    #check_validity()
+    get_power_sum()
